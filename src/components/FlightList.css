@@ -1,0 +1,92 @@
+.flight-table {
+  margin: 0 auto;
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+table {
+  width: 1140px;
+  border-spacing: 0;
+}
+
+th {
+  padding: 12px;
+  color: #95989a;
+  border: 0;
+  background-color: #fff;
+  font-weight: normal;
+}
+
+th.destination {
+  text-align: left;
+  padding-left: 20px;
+}
+th.airline {
+  text-align: left;
+}
+tbody tr {
+  transition: all .3s;
+  height: 70px;
+  padding: 15px 5px;
+}
+
+tbody tr:hover {
+  box-shadow: 0px 4px 9px 1px rgb(184, 180, 184);
+  cursor: pointer;
+  z-index: 1;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #e5eff3;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #fff;
+}
+
+td {
+  font-size: 18px;
+}
+
+td.terminal-a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #6fc84a;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #6fc84a;
+}
+
+td.terminal-d {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #73d2f0;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #73d2f0;
+}
+
+td:first-child {
+  text-align: center;
+  margin-top: 20px;
+}
+
+td.destination {
+  text-align: left;
+  padding-left: 20px;
+}
+
+td.airline {
+  text-align: left;
+  padding-left: 20px;
+}
