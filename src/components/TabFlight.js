@@ -11,7 +11,7 @@ export default class TabFlight extends Component {
   }
   render() {
     const { tabIndex } = this.props;
-    const tabs = ['Departures', 'Arrivals'];
+    const tabs = ['DEPARTURES', 'ARRIVALS'];
     const tabUl = tabs.map((tab, i) => {
       const className = (i === tabIndex) ? 'active' : 'no-active';
       return (<button className={className} tabIndex={i} key={i} onClick={this.tabHandler}>{tab}</button>);
