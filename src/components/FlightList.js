@@ -3,10 +3,9 @@ import Flight from './Flight';
 import './FlightList.css';
 
 export default function FlightList(props) {
-  const { flights, getData, tabIndex } = props;
-  const flightRows = flights.map((flight, i) => {
-    const depData = getData(flight);
-    return  (<Flight {...depData} key={i} tabIndex={tabIndex} />);
+  const { flights, flightType } = props;
+  const flightRows = flights.map(flight => {
+    return  (<Flight {...flight} key={flight.id} selectedFlightType={flightType} />);
   });
 
   return (
@@ -15,7 +14,7 @@ export default function FlightList(props) {
         <thead>
           <tr>
           <th>Terminal</th>
-          {tabIndex === '0' ? (<th>Gate</th>) : null}
+          {flightType === 0 ? (<th>Gate</th>) : null}
           <th>Local time</th>
           <th className="destination">Destination</th>
           <th>Status</th>

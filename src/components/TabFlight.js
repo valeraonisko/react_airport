@@ -7,19 +7,19 @@ export default class TabFlight extends Component {
     this.tabHandler = this.tabHandler.bind(this);
   }
   tabHandler(event) {
-    this.props.tabHandler(event.target.tabIndex)
+    this.props.tabHandler(event.target.dataset.id)
   }
   render() {
-    const { tabIndex } = this.props;
+    const { selectedFlightType } = this.props;
     const tabs = ['DEPARTURES', 'ARRIVALS'];
-    const tabUl = tabs.map((tab, i) => {
-      const className = (i === tabIndex) ? 'active' : 'no-active';
-      return (<button className={className} tabIndex={i} key={i} onClick={this.tabHandler}>{tab}</button>);
+    const tabList = tabs.map((tab, i) => {
+      const className = (i === +(selectedFlightType)) ? 'active' : 'no-active';
+      return (<button className={className} data-id={i} key={tab} onClick={this.tabHandler}>{tab}</button>);
     });
 
     return (
       <nav>
-        {tabUl}
+        {tabList}
       </nav>
     );
   }
